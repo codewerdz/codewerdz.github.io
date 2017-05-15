@@ -54,15 +54,6 @@
         <div class="mdl-layout__header-row">
           <span class="mdl-layout-title">CodeWerdz Project</span>
           <div class="mdl-layout-spacer"></div>
-<!--           <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-            <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
-              <i class="material-icons">search</i>
-            </label>
-            <div class="mdl-textfield__expandable-holder">
-              <input class="mdl-textfield__input" type="text" id="search">
-              <label class="mdl-textfield__label" for="search">Enter your query...</label>
-            </div>
-          </div> -->
         </div>
       </header>
       <div class="demo-ribbon"></div>
@@ -70,21 +61,39 @@
         <div class="demo-container mdl-grid">
           <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
           <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
-            <div class="demo-crumbs mdl-color-text--grey-500">
-              codewerdz.org &gt; README
-            </div>
 <!-- Rendered output start -->
 <h3 id="codewerdz-project">CodeWerdz Project</h3>
-<p>The CodeWerdz Project provides analytics about code and docs for your git repositories.</p>
-<p>More info coming soon...</p>
-<h4 id="tools">Tools</h4>
+<p>The <strong>CodeWerdz Project</strong> provides analytics about code and docs for your git repositories. We build tools to analyze developer behaviour, run continuous analysis against OSS repos, and publish the results of that analysis as reports.</p>
+<h4 id="motivation">Motivation</h4>
+<p>We would like to see developer culture shift from a code-centric model, where the code is considered the most important thing, to a product-centric model, where the code is considered just one component of a shippable product, which also includes unit tests, and documentation.</p>
+<p>To that end, we want to <strong>understand the current industry norms</strong> of developer behaviour regarding documentation, and try to understand what factors influence the success of a product-oriented culture.</p>
+<p>To determine that, we will look at a variety of open-source projects, where code and docs are stores side-by-side in a revision control system. For those projects, we will analyze the commit behaviour of the developers trying to answer questions like:</p>
 <ul>
+<li>What is the <strong>ratio of code to docs</strong>, in terms of overall character volume?</li>
+<li>How often is a commit 100% code or 100% docs?</li>
+<li>For commits that are a mix of code and docs, <strong>what is a typical ratio</strong>?</li>
+<li>Are docs committed in spikes or continuously?</li>
+<li>Does the overall <strong>size of the team</strong> affect this ratio?</li>
+<li>What is the code-to-docs ratio for each contributor?</li>
+<li>Are any contributors 100% code or 100% docs? If so, does that correlate to team size?</li>
+<li>Do projects that have a more doc-oriented culture have more success?</li>
+</ul>
+<p>We will look at a large variety of factors, across many open source repositories in popular communities like <a href="https://github.com">GitHub</a>, <a href="https://apache.org">Apache Software Foundation</a>, <a href="https://bitbucket.com">Bitbucket</a>, in order to get a <strong>large sample size</strong>.</p>
+<p>We will also have a contribution model so that companies may independently <strong>measure their private repositories</strong> and publish the results, so that we can include an understanding of both for-profit industry as well as open-source communities. We will try to determine if there is a material difference between open-source and closed-source behaviour.</p>
+<h4 id="tools">Tools</h4>
+<p>The analysis tools will be comprised of three primary components:</p>
+<ul>
+<li><p><a href="https://github.com/codewerdz/codewerdz-ci">codewerdz-ci</a></p>
+<p>A CI task to run the analysis against many repositories. This component will maintain a list of repositories to analyze and coordinate the individual analysis tasks.</p></li>
 <li><p><a href="https://github.com/codewerdz/codewerdz-git-metrics">codewerdz-git-metrics</a></p>
-<p>A CLI tool that analyzes a Git repo and produces metrics in a standardized data file.</p></li>
+<p>A standalone CLI tool that analyzes a single Git repository and produces metrics in a standardized data file.</p></li>
+<li><p><a href="https://github.com/codewerdz/codewerdz-reports">codewerdz-reports</a></p>
+<p>A report builder that aggregates and publishes the analysis results to a public website. It will merge together the data created by CI with the manually submitted data from community members who have analyzed their private repositories.</p></li>
 </ul>
 <h4 id="contributors">Contributors</h4>
 <ul>
-<li><a href="https://github.com/thoward">Troy Howard</a></li>
+<li><a href="https://github.com/thoward">Troy Howard</a> - Project Coordinator</li>
+<li><a href="https://github.com/nikblanchet">Nik Blanchet</a> - Creative Naming Engineer</li>
 </ul>
 <h4 id="license">License</h4>
 <p>MIT License</p>
